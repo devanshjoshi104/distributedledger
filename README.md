@@ -1,3 +1,25 @@
+
+Deployed on https://btp-frontend.onrender.com
+# Decentralized Book Exchange (DBE) Using Ethereum Blockchain
+Students can browse and borrow books directly from other students through a Decentralized Book Exchange or (DeBex). It is a Web3 application that is P2P based. Let's look at some of the main points in order to comprehend the issue thoroughly.
+What are the major flaws in the current system? 
+P1-> Non-digital - Using a non-digital system to store such vital information renders the entire system inefficient and unmanageable. 
+P2-> Centralized - Even creating a database for the system with a query interface will not solve our problem because any lab operator can manipulate it. For instance, if we want to know who currently owns pc-1, we must examine its borrowing trail, which the operators can manipulate.
+Possible solutions
+To solve this problem, we can envision an application that provides a user-friendly interface for interacting with the database. However, this only translates to P1. For P2, we must employ the most recent computer science concept, Blockchain. We must explicitly design a distributed ledger system for our campus labs in order to store the necessary equipment tracking information.
+
+
+Create a web application to interact with the smart contract. 
+The client web app includes a home page that displays all of the books along with the current owner's information. 
+Users can request to borrow the book. 
+By approving the request, users can give the new borrower ownership of the book. 
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
