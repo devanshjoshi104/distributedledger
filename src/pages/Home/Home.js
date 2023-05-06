@@ -12,11 +12,11 @@ const Home = () => {
 
   useEffect(() => {
     console.log(user)
-    // if (!user) {
-    //   navigate('/login', {
-    //     replace: true,
-    //   })
-    // }
+    if (!user) {
+      navigate('/login', {
+        replace: true,
+      })
+    }
   }, [user])
 
 
