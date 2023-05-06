@@ -1,8 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import bookImage from '../../assets/book.jpeg';
 import './Home.css'
+import { useSelector } from 'react-redux';
+import { redirect, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+
+  const user = useSelector((state) => state.user)
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    console.log(user)
+    // if (!user) {
+    //   navigate('/login', {
+    //     replace: true,
+    //   })
+    // }
+  }, [user])
+
+
   const [searchQuery, setSearchQuery] = useState('');
   const books = [
     { id: 1, name: 'Book 1' },
@@ -26,16 +43,16 @@ const Home = () => {
   return (
     <div className="Home-page">
       <input className='Home-book-search' type="text" value={searchQuery} onChange={handleSearchInputChange} placeholder="Search Book..." />
-      
+
       <div className='Home-books-container'>
-        
-      {filteredBooks.map((user) => (<div className='Dashboard-books' key={user.id}>
-         <img src={bookImage} alt="Book"  style={{ width: '176px', height: '205px' }}/>
-         <h2 className='Dashboard-page-BookTitle'>{user.name} </h2>
-         </div>))}
+
+        {filteredBooks.map((user) => (<div className='Dashboard-books' key={user.id}>
+          <img src={bookImage} alt="Book" style={{ width: '176px', height: '205px' }} />
+          <h2 className='Dashboard-page-BookTitle'>{user.name} </h2>
+        </div>))}
       </div>
-      
-      
+
+
     </div>
   );
 };

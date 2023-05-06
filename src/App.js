@@ -9,9 +9,14 @@ import axios from 'axios'
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ConnectWallet from './pages/ConnectWallet';
+import Home from './pages/Home/Home';
 
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
   {
     path: "/connectWallet",
     element: <ConnectWallet />,

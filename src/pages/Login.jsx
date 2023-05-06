@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../components/navbar/Navbar'
 import '../styles/login.css'
 import { redirect, useLocation, useNavigate } from 'react-router-dom'
@@ -16,13 +16,15 @@ export default function Login() {
         password: ''
     })
 
+    useEffect(() => {
+        if (user) {
+            navigate('/connectWallet')
+        }
+    }, [user])
+
     const onClickLogin = async () => {
         try {
             const res = await dispatch(login(creds))
-            console.log(user)
-            if (user) {
-                navigate('/connectWallet')
-            }
         } catch (e) {
             console.log(e)
         }
