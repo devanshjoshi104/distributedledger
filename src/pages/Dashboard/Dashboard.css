@@ -1,0 +1,84 @@
+.Dashboard-page{
+    width: 98;
+    min-height: 100vh;
+    padding: 1%;
+    
+}
+
+
+
+ul{list-style: none;
+padding: 0px;}
+ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* width: 60%; */
+}
+.Dashboard-page-format-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Dashboard-page-row{
+    display: flex;
+    justify-content:space-around;
+width: 90vw;
+border-color: #BDBDBD;
+border-style: solid;
+border-width: 2px;
+border-radius: 20px;
+padding: 10px;}
+.Dashboard-page-row1{
+    display: flex;
+    justify-content:space-around;
+width: 90vw;
+background-color: rgb(0, 238, 255);
+padding: 10px;}
+
+
+.Dashboard-page-Owners{color: #BDBDBD;
+}
+button{
+    cursor: pointer;
+}
+
+.Dashboard-books{
+    background-color:#F5F5F5;
+    
+    padding: 10px;
+    width:200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:space-around;
+    margin: 20px;
+}
+.Dashboard-page-BookTitle{
+    color: #BDBDBD;
+    font-size: 20px;
+    align-items: center;
+    justify-content:center;
+}
+
+.Dashboard-books-container{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+@media screen and (max-width: 800px) {
+   
+    .Dashboard-page-row1 td{
+        min-width: 20vw;
+        overflow: hidden;
+        margin:0;
+    }
+    .Dashboard-page-row1{
+        width: 100vw;
+    }
+    .Dashboard-page-row{
+        width: 98vw;
+    }
+  
+}

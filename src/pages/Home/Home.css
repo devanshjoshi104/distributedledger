@@ -1,0 +1,22 @@
+.Home-page{
+    width: 98;
+    min-height: 100vh;
+    padding: 1%;
+    
+}.Home-book-search{
+width: 50vw;
+min-height: 40px;
+border-radius: 10px;
+margin-left: 25%;
+margin-right: auto;
+border-color: #BDBDBD;
+padding-left: 20px;
+
+}
+.Home-books-container{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 24%;
+    width: 60vw;
+}
