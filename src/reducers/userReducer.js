@@ -4,12 +4,16 @@ export const userReducer = createSlice({
   name: 'user',
   initialState: {
     user: null,
-    jwtToken: null,
+    token: null,
     fetchingUser:false,
+    wallet:null,
   },
   reducers: {
-    setJwtToken: (state, action) => {
-      state.jwtToken = action.payload;
+    setToken: (state, action) => {
+      state.token = action.payload;
+    },
+    setWallet: (state, action) => {
+      state.wallet = action.payload;
     },
     setUser: (state, action) => {
       state.user = action.payload;
@@ -21,6 +25,6 @@ export const userReducer = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setJwtToken, setUser,setFetchingUser } = userReducer.actions
+export const { setWallet,setToken, setUser,setFetchingUser } = userReducer.actions
 
 export default userReducer.reducer

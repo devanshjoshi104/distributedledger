@@ -1,0 +1,22 @@
+.navbar-outer {
+    border-bottom: 2px solid var(--primary);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 20px 0px;
+    align-items: center;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-list-item {
+    margin: 0rem 1rem;
+    font-weight: 600;
+}

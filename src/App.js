@@ -4,50 +4,53 @@ import { useCookies } from 'react-cookie';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { API_URL } from './config'
 import "./index.css"
-import { setFetchingUser, setJwtToken, setUser } from './reducers/userReducer'
+import { setFetchingUser, setToken, setUser } from './reducers/userReducer'
 import axios from 'axios'
 import Login from './pages/Login';
+import Register from './pages/Register';
+import ConnectWallet from './pages/ConnectWallet';
 
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Login />,
+    path: "/connectWallet",
+    element: <ConnectWallet />,
   },
   {
     path: "/login",
     element: <Login />,
   },
   {
-    path: "/home",
-    element: <Login />,
+    path: "/register",
+    element: <Register />,
   },
-  
+
 ]);
+
 
 
 export default function App() {
 
-  const [cookies, setCookie, removeCookie] = useCookies(['token', 'referrer']);
-  const jwtToken = useSelector((state) => state.user.jwtToken)
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
+  const token = useSelector((state) => state.user.token)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (cookies && cookies.token && jwtToken === null) {
-      dispatch(setJwtToken(cookies["token"]));
+    if (cookies && cookies.token && token === null) {
+      dispatch(setToken(cookies["token"]));
     }
   }, [cookies])
 
   useEffect(() => {
     console.log("cookies==================", cookies)
-    if (jwtToken) {
+    if (token) {
       fetchCurrentUser();
-      setCookie('token', jwtToken, {
+      setCookie('token', token, {
         path: "/",
         maxAge: 31536000
       });
     }
-  }, [jwtToken])
+  }, [token])
 
   const fetchCurrentUser = async () => {
     try {
@@ -71,7 +74,9 @@ export default function App() {
   }
 
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+    </>
   )
 }
 

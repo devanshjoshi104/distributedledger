@@ -1,0 +1,32 @@
+.login-outer-cnt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.login-cnt {
+    background-color: white;
+    padding: 2rem 2rem;
+    border-radius: 0.5rem;
+}
+
+.login-input {
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.login-btn {
+    margin-top: 1rem;
+    float: right;
+}
+
+@media screen and (max-width: 576px) {
+
+    .login-outer-cnt {
+        grid-template-columns: 1fr;
+    }
+}
