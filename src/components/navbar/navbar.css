@@ -1,12 +1,12 @@
 .navbar-outer {
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid #eeeeee;
 }
 
 .navbar {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
     padding: 20px 0px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-list {
@@ -18,5 +18,6 @@
 
 .navbar-list-item {
     margin: 0rem 1rem;
-    font-weight: 600;
+    /* font-weight: 600; */
+    cursor: pointer;
 }
